@@ -1,29 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <Style>
-        body{
-            background-color: aqua;
+    <title>Лучшие курорты</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
         }
-        h1{
-            color: yellow;
+
+        h1 {
             text-align: center;
+            color: #ffeb3b;
+            margin-top: 20px;
+            font-size: 3em;
         }
-        p{
-            color: yellow;
-            font-size: larger;
-            font-family: 'Times New Roman', Times, serif;
-            text-algin: center;
+
+        p {
+            text-align: center;
+            font-size: 1.3em;
+            margin: 20px;
         }
-    </Style>
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .resorts-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+        }
+
+        .resort-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .resort-card:hover {
+            transform: scale(1.05);
+        }
+
+        .resort-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .resort-name {
+            margin-top: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ffe082;
+        }
+
+        .resort-description {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #f0f8ff;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .resorts-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>Приветствую</h1>
     <p>Все из нас любят отдыхать на море в жарких странах. Так давайте представим вам лучшие курорты</p>
-    <img src="https://tripmydream.cc/travelhub/travel/block_gallery/91/609/default_91609.jpg?" alt="">
+    <img class="hero-image" src="https://tripmydream.cc/travelhub/travel/block_gallery/91/609/default_91609.jpg?" alt="Курорт">
+
+    <div class="resorts-container">
+        <div class="resort-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/BoraBora.jpg/800px-BoraBora.jpg" alt="Бора-Бора">
+            <div class="resort-name">Бора-Бора, Французская Полинезия</div>
+            <div class="resort-description">Райский уголок с бирюзовой водой и белоснежными пляжами.</div>
+        </div>
+        <div class="resort-card">
+            <img src="https://www.planetware.com/wpimages/2020/01/world-best-beach-resorts-four-seasons-resort-bali.jpg" alt="Бали">
+            <div class="resort-name">Бали, Индонезия</div>
+            <div class="resort-description">Тропический остров с древними храмами и живописной природой.</div>
+        </div>
+        <div class="resort-card">
+            <img src="https://media.cntraveler.com/photos/5d4b6c78dfe8c70008eae4f1/16:9/w_2560%2Cc_limit/Riviera-Maya_GettyImages-1067205368.jpg" alt="Мексика">
+            <div class="resort-name">Ривьера Майя, Мексика</div>
+            <div class="resort-description">Идеальное место для отдыха: океан, солнце и история майя.</div>
+        </div>
+    </div>
 </body>
 </html>
+
